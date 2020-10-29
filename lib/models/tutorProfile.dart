@@ -1,23 +1,31 @@
 import 'package:flutter/material.dart';
 
-class TutorProfil{
-  final int tid;
+class TutorProfile{
+  final String name;
   int regNo;
   int currentyear;
-  DateTime dob;
+  int yearofgrad;
+  String email;
+  int phoneno;
   String topic;
   String grade;
   String other;
+  String password;
+  String image;
 
-  TutorProfil(
+  TutorProfile(
     {
-      @required this.tid,
+      @required this.name,
       @required this.regNo,
       @required this.currentyear,
-      @required this.dob,
       @required this.topic,
-      @required this.grade,
-      this.other
+      this.grade,
+      @required this.yearofgrad,
+      @required this.email,
+      @required this.phoneno,
+      @required this.password,
+      this.other,
+      this.image
     }
   ); 
 }
