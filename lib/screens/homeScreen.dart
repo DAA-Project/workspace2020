@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:workspace/screens/tutorScreen.dart';
 
 
+
 class HomeScreen extends StatelessWidget {
   
  
@@ -10,6 +11,7 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('WORKSPACE'),
+       
         ),
         body: Padding(
           padding: const EdgeInsets.all(8.0),
