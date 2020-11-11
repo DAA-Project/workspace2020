@@ -67,21 +67,21 @@ class TutorInfoScreen  extends StatelessWidget {
                 ),
                 color: Colors.deepOrange,
                 child: Container(
-                  width: 100,
-                  height: 100,
+                  width: 150,
+                  height: 150,
                   decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(100),
+                    borderRadius: BorderRadius.circular(500),
                     border: Border.all(
-                      color: Colors.white,
+                      color: Colors.purple,
                       width: 6.0,
                     ),
                   ),
                   child: ClipRRect(
-                      borderRadius: BorderRadius.circular(80),
+                      borderRadius: BorderRadius.circular(500),
                       child: Image.asset(
                           loadedProfile.image,
-                          width: 80,
-                          height: 80,
+                          width: 100,
+                          height: 100,
                           fit: BoxFit.fill)),
                 ),
               ),

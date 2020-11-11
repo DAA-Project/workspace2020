@@ -189,15 +189,11 @@ class _LoginScreenState extends State<LoginScreen> {
               height: double.infinity,
               width: double.infinity,
               decoration: BoxDecoration(
-                  gradient: LinearGradient(
-                      begin: Alignment.topCenter,
-                      end: Alignment.bottomRight,
-                      colors: [
-                    Color(0x669bc693),
-                    Color(0x999bc693),
-                    Color(0xcc9bc693),
-                    Color(0xff9bc693),
-                  ])),
+          image: DecorationImage(
+            image: AssetImage("assets/images/back.jpg"),
+            fit: BoxFit.cover,
+          ),
+        ),
               child: SingleChildScrollView(
                 physics: AlwaysScrollableScrollPhysics(),
                 padding: EdgeInsets.symmetric(
@@ -207,13 +203,18 @@ class _LoginScreenState extends State<LoginScreen> {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
-                    Text(
-                      'WELCOME TO WORKSPACE',
-                      style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 30,
-                          fontWeight: FontWeight.bold),
-                     ),        SizedBox(height: 5,
+                    Container(
+                      // decoration: BoxDecoration(
+                      //   color: Colors.grey[500],
+                      //   ),
+                      child: Text(
+                        'WELCOME TO WORKSPACE',
+                        style: TextStyle(
+                            color: Colors.grey[900],
+                            fontSize: 30,
+                            fontWeight: FontWeight.bold),
+                       ),
+                    ),        SizedBox(height: 5,
                                   child: Divider(
                                   color: Colors.black,
                                 ),
