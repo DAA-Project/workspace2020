@@ -3,7 +3,7 @@ import 'package:workspace/provider/tProfiles.dart';
 import 'screens/logInScreen.dart';
 
 
-//import 'screens/homeScreen.dart';
+import 'screens/homeScreen.dart';
 import './screens/tutorinfoScreen.dart';
 import 'package:provider/provider.dart';
 
@@ -22,12 +22,16 @@ class MyApp extends StatelessWidget {
         title: 'WORKSPACE',
         theme: ThemeData(
           
-          primarySwatch: Colors.indigo,
-          accentColor: Colors.amber,
-          canvasColor: Color.fromRGBO(255, 254, 229, 1),
+         
           fontFamily: 'Roboto',
         ),
-        home: LoginScreen(),
+        home: Container(
+          decoration: BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage("assets/images/back.jpg"),
+            fit: BoxFit.cover,
+          ),
+        ),child: HomeScreen()),
         routes: {
           TutorInfoScreen.routeName: (ctx) => TutorInfoScreen(),
         }
