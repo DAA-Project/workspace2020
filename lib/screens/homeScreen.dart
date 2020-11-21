@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:workspace/screens/tutorScreen.dart';
+import 'package:workspace/screens/tutor/tutorScreen.dart';
+import '../widgets/app_drawer.dart';
+import './miScreen.dart';
 
 
 class HomeScreen extends StatelessWidget {
@@ -9,21 +11,26 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar :  AppBar (
-        
         title: const Text('WORKSPACE'),
+        backgroundColor: Colors.cyan,
+        elevation: 10,
+        shadowColor: Colors.cyan
         ),
+      drawer: AppDrawer(),
+      backgroundColor: Color.fromARGB(255, 238, 238, 238),
         body: Container(
           decoration: BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage("assets/images/back.jpg"),
-            fit: BoxFit.cover,
-          ),
+            color: Color.fromARGB(255, 238, 238, 238),
+            boxShadow: [
+            BoxShadow(offset: Offset(10,10),color:Color.fromARGB(80, 0, 0, 0),blurRadius: 10),
+            BoxShadow(offset: Offset(10,10),color:Color.fromARGB(150 , 255, 255, 255),blurRadius: 10),]
         ),
           child: Padding(
             padding: const EdgeInsets.all(50.0),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
                 children: <Widget>[
+                  SizedBox(height: 25),
                   Row(
                     children: <Widget>[
                       Expanded(
@@ -33,6 +40,7 @@ class HomeScreen extends StatelessWidget {
                             color: Colors.transparent,
                             child: RaisedButton(
                               elevation: 15,
+                              splashColor: Colors.cyan,
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(18.0),
                                 side: BorderSide(color: Colors.grey)
@@ -68,6 +76,7 @@ class HomeScreen extends StatelessWidget {
                             color: Colors.transparent,
                             child: RaisedButton(
                               elevation: 15,
+                              splashColor: Colors.cyan,
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(18.0),
                                 side: BorderSide(color: Colors.grey)
@@ -75,7 +84,7 @@ class HomeScreen extends StatelessWidget {
                               color: Colors.white,
                               onPressed: (){Navigator.push(
                                 context,
-                                MaterialPageRoute(builder: (context) => TutorScreen()),);},
+                                MaterialPageRoute(builder: (context) => MIScreen()),);},
                               child: FittedBox(
                               child: Column(
                                 children: [
@@ -108,14 +117,13 @@ class HomeScreen extends StatelessWidget {
                             color: Colors.transparent,
                             child: RaisedButton(
                               elevation: 15,
+                              splashColor: Colors.cyan,
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(18.0),
                                 side: BorderSide(color: Colors.grey)
                               ),
                               color: Colors.white,
-                              onPressed: (){Navigator.push(
-                                context,
-                                MaterialPageRoute(builder: (context) => TutorScreen()),);},
+                              onPressed: (){},
                               child: FittedBox(
                               child: Column(
                                 children: [
@@ -144,14 +152,13 @@ class HomeScreen extends StatelessWidget {
                             color: Colors.transparent,
                             child: RaisedButton(
                               elevation: 15,
+                              splashColor: Colors.cyan,
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(18.0),
                                 side: BorderSide(color: Colors.grey)
                               ),
                               color: Colors.white,
-                              onPressed: (){Navigator.push(
-                                context,
-                                MaterialPageRoute(builder: (context) => TutorScreen()),);},
+                              onPressed: (){},
                               child: FittedBox(
                               child: Column(
                                 children: [

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:workspace/provider/tProfiles.dart';
-import '../screens/tutorInfoScreen.dart';
+import '../screens/tutor/tutorInfoScreen.dart';
 import 'package:provider/provider.dart';
 import '../provider/tProfile.dart';
 
@@ -35,6 +35,12 @@ class TutorInfo extends StatelessWidget {
                 color: Colors.white,
                 onPressed: () {
                   tutor.toggleSaveStatus();
+                  Scaffold.of(context).showSnackBar(SnackBar(
+                    content: Text('Tutor Saved!',textAlign: TextAlign.center,),
+                    duration: Duration(seconds: 2),
+                    ),
+                    
+                    );
                 },
               ),
               ),

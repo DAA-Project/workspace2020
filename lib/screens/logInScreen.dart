@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import './signUpScreen.dart';
 import './homeScreen.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -19,7 +20,7 @@ class _LoginScreenState extends State<LoginScreen> {
         Text(
           'Email',
           style: TextStyle(
-              color: Colors.white, fontSize: 16, fontWeight: FontWeight.bold),
+              color: Colors.grey, fontSize: 16, fontWeight: FontWeight.bold),
         ),
         SizedBox(height: 10),
         Container(
@@ -43,7 +44,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 contentPadding: EdgeInsets.only(top: 14),
                 prefixIcon: Icon(
                   Icons.email,
-                  color: Color(0xff9bc693),
+                  color: Colors.grey[400],
                 ),
                 hintText: 'Email',
                 hintStyle: TextStyle(color: Colors.black38)),
@@ -60,7 +61,7 @@ class _LoginScreenState extends State<LoginScreen> {
         Text(
           'Password',
           style: TextStyle(
-              color: Colors.white, fontSize: 16, fontWeight: FontWeight.bold),
+              color: Colors.grey, fontSize: 16, fontWeight: FontWeight.bold),
         ),
         SizedBox(height: 10),
         Container(
@@ -84,7 +85,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 contentPadding: EdgeInsets.only(top: 14),
                 prefixIcon: Icon(
                   Icons.lock,
-                  color: Color(0xff9bc693),
+                  color: Colors.grey[400],
                 ),
                 hintText: 'Password',
                 hintStyle: TextStyle(color: Colors.black38)),
@@ -102,7 +103,7 @@ class _LoginScreenState extends State<LoginScreen> {
         padding: EdgeInsets.only(right: 0),
         child: Text(
           'Forgot Password?',
-          style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+          style: TextStyle(color: Colors.grey, fontWeight: FontWeight.bold),
         ),
       ),
     );
@@ -114,11 +115,11 @@ class _LoginScreenState extends State<LoginScreen> {
       child: Row(
         children: <Widget>[
           Theme(
-              data: ThemeData(unselectedWidgetColor: Colors.white),
+              data: ThemeData(unselectedWidgetColor: Colors.grey),
               child: Checkbox(
                 value: isRememberMe,
-                checkColor: Colors.green,
-                activeColor: Colors.white,
+                checkColor: Colors.cyan,
+                activeColor: Color.fromARGB(255, 238, 238, 238),
                 onChanged: (value) {
                   setState(() {
                     isRememberMe = value;
@@ -127,7 +128,7 @@ class _LoginScreenState extends State<LoginScreen> {
               )),
           Text(
             'Remember me',
-            style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+            style: TextStyle(color: Colors.grey, fontWeight: FontWeight.bold),
           )
         ],
       ),
@@ -149,7 +150,7 @@ class _LoginScreenState extends State<LoginScreen> {
         child: Text(
           'LOGIN',
           style: TextStyle(
-              color: Color(0xff9bc693),
+              color: Colors.grey[900],
               fontSize: 18,
               fontWeight: FontWeight.bold),
         ),
@@ -159,18 +160,20 @@ class _LoginScreenState extends State<LoginScreen> {
 
   Widget buildSignUpBtn() {
     return GestureDetector(
-      onTap: () => print("Sign Up Pressed "),
+      onTap: () {Navigator.push(
+                                context,
+                                MaterialPageRoute(builder: (context) => SignUpScreen()),);},
       child: RichText(
         text: TextSpan(children: [
           TextSpan(
             text: 'Do not have an account? ',
             style: TextStyle(
-                color: Colors.white, fontSize: 18, fontWeight: FontWeight.w500),
+                color: Colors.grey, fontSize: 18, fontWeight: FontWeight.w500),
           ),
           TextSpan(
               text: 'Sign Up',
               style: TextStyle(
-                  color: Colors.blue,
+                  color: Colors.cyan,
                   fontSize: 18,
                   fontWeight: FontWeight.bold))
         ]),
@@ -181,6 +184,7 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color.fromARGB(255, 238, 238, 238),
       body: AnnotatedRegion<SystemUiOverlayStyle>(
           value: SystemUiOverlayStyle.light,
           child: GestureDetector(
@@ -189,11 +193,12 @@ class _LoginScreenState extends State<LoginScreen> {
               height: double.infinity,
               width: double.infinity,
               decoration: BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage("assets/images/back.jpg"),
-            fit: BoxFit.cover,
-          ),
+            color: Color.fromARGB(255, 238, 238, 238),
+            boxShadow: [
+            BoxShadow(offset: Offset(10,10),color:Color.fromARGB(80, 0, 0, 0),blurRadius: 10),
+            BoxShadow(offset: Offset(10,10),color:Color.fromARGB(150 , 255, 255, 255),blurRadius: 10),]
         ),
+        
               child: SingleChildScrollView(
                 physics: AlwaysScrollableScrollPhysics(),
                 padding: EdgeInsets.symmetric(
@@ -214,7 +219,8 @@ class _LoginScreenState extends State<LoginScreen> {
                             fontSize: 30,
                             fontWeight: FontWeight.bold),
                        ),
-                    ),        SizedBox(height: 5,
+                    ),        
+                    SizedBox(height: 5,
                                   child: Divider(
                                   color: Colors.black,
                                 ),

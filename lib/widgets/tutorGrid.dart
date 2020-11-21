@@ -10,12 +10,13 @@ class TutorGrid extends StatelessWidget {
     final tutorData= Provider.of<TProfiles>(context);
     final tutor= showSaved ? tutorData.savedTutors : tutorData.profiles;
     return GridView.builder(
+      
         padding: EdgeInsets.all(10.0),
         itemCount: tutor.length,
         itemBuilder: (ctx, i) => ChangeNotifierProvider.value(
           //create: (c) => tutor[i],
           value: tutor[i],
-          
+           
           child: TutorInfo(
           // tutor[i].image,
           // tutor[i].regNo,
@@ -24,6 +25,7 @@ class TutorGrid extends StatelessWidget {
           ),
           ),
         gridDelegate:  SliverGridDelegateWithFixedCrossAxisCount(
+          
             crossAxisCount: 2,
             childAspectRatio: 2 / 3,
             crossAxisSpacing: 20,
