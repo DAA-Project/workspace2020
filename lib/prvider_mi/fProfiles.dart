@@ -12,7 +12,7 @@ class FProfiles with ChangeNotifier {
     phoneno: '9829635421',
     fid: '189303177',
     yearOfExp: '2',
-    qual: '2022',
+    qual: 'phd',
     password: '123',
     image: 'assets/images/unknown.png',
     
@@ -26,7 +26,7 @@ class FProfiles with ChangeNotifier {
     phoneno: '9158463258',
     fid: '189303166',
     yearOfExp: '2',
-    qual: '2022',
+    qual: 'phd',
     password: '123',
     image: 'assets/images/unknown.png',
 

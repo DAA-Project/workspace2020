@@ -4,12 +4,6 @@ import 'package:provider/provider.dart';
 import '../prvider_mi/fProfile.dart';
 
 class MIInfo extends StatelessWidget {
-// final String image;
-// final String name;
-// final String topic;
-// final String regNo;
-
-// TutorInfo(this.image,this.regNo,this.name,this.topic);
 
   @override
   Widget build(BuildContext c) {

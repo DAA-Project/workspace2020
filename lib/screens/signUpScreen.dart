@@ -37,8 +37,51 @@ class SignUpScreen extends StatelessWidget {
                                       fontWeight: FontWeight.bold,
                                     )),
                                ),
-          )
-                          
+          ),
+            Container(
+            height: 50,
+            width: 300,
+            child: RaisedButton(
+                                elevation: 8,
+                                
+                                splashColor: Colors.cyan,
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(8.0),
+                                  side: BorderSide(color: Colors.grey)
+                                ),
+                                color: Colors.white,
+                                onPressed: (){Navigator.push(
+                                  context,
+                                  MaterialPageRoute(builder: (context) => FacultySignUp()),);},
+                                  child:Text('Im a Faculty',
+                                    style: TextStyle(
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.bold,
+                                    )),
+                               ),
+          ),
+           Container(
+            height: 50,
+            width: 300,
+            child: RaisedButton(
+                                elevation: 8,
+                                
+                                splashColor: Colors.cyan,
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(8.0),
+                                  side: BorderSide(color: Colors.grey)
+                                ),
+                                color: Colors.white,
+                                onPressed: (){Navigator.push(
+                                  context,
+                                  MaterialPageRoute(builder: (context) => StudentSignUp()),);},
+                                  child:Text('Im a Student',
+                                    style: TextStyle(
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.bold,
+                                    )),
+                               ),
+          )            
         ]
         
       ),

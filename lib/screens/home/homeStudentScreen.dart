@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:workspace/screens/tutor/tutorScreen.dart';
-import '../widgets/app_drawer.dart';
-import './miScreen.dart';
+import '../../widgets/homeStudentDrawer.dart';
+import '../miScreen.dart';
 
 
-class HomeScreen extends StatelessWidget {
+class HomeStudentScreen extends StatelessWidget {
   
  
  @override
@@ -16,7 +16,7 @@ class HomeScreen extends StatelessWidget {
         elevation: 10,
         shadowColor: Colors.cyan
         ),
-      drawer: AppDrawer(),
+      drawer: HomeStudentDrawer(),
       backgroundColor: Color.fromARGB(255, 238, 238, 238),
         body: Container(
           decoration: BoxDecoration(

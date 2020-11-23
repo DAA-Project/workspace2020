@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class FProfile with ChangeNotifier{
     final String fname;
     final String fid;
-    String qual;
+    final String qual;
     final String yearOfExp;       //year of experience
     final String dept;
     final String phoneno;
@@ -19,7 +19,7 @@ class FProfile with ChangeNotifier{
         @required this.fid,
         @required this.phoneno,
        
-        @required qual,
+        @required this.qual,
         @required this.dept,
         @required this.yearOfExp,
         @required this.password,

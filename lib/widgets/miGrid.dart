@@ -1,5 +1,5 @@
-import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:flutter/material.dart';
 import 'miInfoWidget.dart';
 import '../prvider_mi/fProfiles.dart';
 class MIGrid extends StatelessWidget {
