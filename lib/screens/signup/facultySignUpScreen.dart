@@ -9,10 +9,9 @@ class _FacultySignUpState extends State<FacultySignUp> {
 
   final _formKey = GlobalKey<FormState>();
   TextEditingController _name = TextEditingController();
-  TextEditingController _regNo = TextEditingController();
   TextEditingController _contact = TextEditingController();
   TextEditingController _department = TextEditingController();
-  TextEditingController _subject = TextEditingController();
+
   TextEditingController _oPrj = TextEditingController();
   TextEditingController _rPaper = TextEditingController();
   TextEditingController _email = TextEditingController();
@@ -25,99 +24,92 @@ class _FacultySignUpState extends State<FacultySignUp> {
       ),
       body: SingleChildScrollView(
         child: Container(
+          height: MediaQuery.of(context).size.height*0.9,
           padding: EdgeInsets.all(10),
           child: Form(
             key: _formKey,
             child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 TextFormField(
                   controller: _name,
                   decoration: InputDecoration(
-                    hintText: 'Name'
-                  ),
+                    hintText: 'Name',
+                    prefixIcon: Icon(Icons.account_circle, color: Colors.indigo,)
+                    ),
                   validator: (value) {
-                    if(value.isEmpty) return 'Enter Name';
+                    if (value.isEmpty) return 'Enter Name';
                   },
-                ),
-                TextFormField(
-                  controller: _regNo,
-                  decoration: InputDecoration(
-                    hintText: 'Registration Number'
-                  ),
-                  validator: (value) {
-                    if(value.isEmpty) return 'Enter Reg No';
-                  },
+
                 ),
                 TextFormField(
                   controller: _contact,
                   decoration: InputDecoration(
-                    hintText: 'Contact'
+                    hintText: 'Contact',
+                    prefixIcon: Icon(Icons.phone_android, color: Colors.indigo,)
                   ),
                   validator: (value) {
-                    if(value.isEmpty) return 'Enter contact';
+                    if (value.isEmpty) return 'Enter contact';
                   },
                 ),
                 TextFormField(
                   controller: _department,
                   decoration: InputDecoration(
-                    hintText: 'Department'
-                  ),
+                    hintText: 'Department',
+                    prefixIcon: Icon(Icons.school, color: Colors.indigo,)
+                    ),
                   validator: (value) {
-                    if(value.isEmpty) return 'Enter department';
-                  },
-                ),
-                TextFormField(
-                  controller: _subject,
-                  decoration: InputDecoration(
-                    hintText: 'Subject'
-                  ),
-                  validator: (value) {
-                    if(value.isEmpty) return 'Enter Subject';
+                    if (value.isEmpty) return 'Enter department';
                   },
                 ),
                 TextFormField(
                   controller: _oPrj,
                   decoration: InputDecoration(
-                    hintText: 'Ongoing Projects'
-                  ),
+                    hintText: 'Ongoing Projects',
+                    prefixIcon: Icon(Icons.dns, color: Colors.indigo,)
+                    ),
                   validator: (value) {
-                    if(value.isEmpty) return 'Enter Ongoing Projects';
+                    if (value.isEmpty) return 'Enter Ongoing Projects';
                   },
                 ),
                 TextFormField(
                   controller: _rPaper,
                   decoration: InputDecoration(
-                    hintText: 'Research Paper'
-                  ),
+                    hintText: 'Research Paper',
+                   prefixIcon: Icon(Icons.assignment, color: Colors.indigo,)
+                    ),
                   validator: (value) {
-                    if(value.isEmpty) return 'Enter Research Paper';
+                    if (value.isEmpty) return 'Enter Research Paper';
                   },
                 ),
                 TextFormField(
                   controller: _email,
                   decoration: InputDecoration(
-                    hintText: 'Email'
-                  ),
+                    hintText: 'Email',
+                    prefixIcon: Icon(Icons.mail, color: Colors.indigo,)
+                    ),
                   validator: (value) {
-                    if(value.isEmpty) return 'Enter Email';
+                    if (value.isEmpty) return 'Enter Email';
                   },
                 ),
                 TextFormField(
+                  obscureText: true,
                   controller: _password,
                   decoration: InputDecoration(
-                    hintText: 'Password'
-                  ),
+                    hintText: 'Password',
+                    prefixIcon: Icon(Icons.lock, color: Colors.indigo,)
+                    ),
                   validator: (value) {
-                    if(value.isEmpty) return 'Enter Passsword';
+                    if (value.isEmpty) return 'Enter Passsword';
                   },
                 ),
                 RaisedButton(
-                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
-                  child: Text('SignUp'),
-                  onPressed: (){
-                    if(_formKey.currentState.validate()){
-
-                    }
+                  color: Colors.indigo,
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20)),
+                  child: Text('SignUp', style: TextStyle(color:Colors.white ),),
+                  onPressed: () {
+                    if (_formKey.currentState.validate()) {}
                   },
                 )
               ],

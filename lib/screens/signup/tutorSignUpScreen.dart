@@ -26,15 +26,18 @@ class _TutorSignUpState extends State<TutorSignUp> {
       ),
       body: SingleChildScrollView(
         child: Container(
+          height: MediaQuery.of(context).size.height*0.9,
           padding: EdgeInsets.all(10),
           child: Form(
             key: _formKey,
             child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 TextFormField(
                   controller: _name,
                   decoration: InputDecoration(
-                    hintText: 'Name'
+                    hintText: 'Name',
+                    prefixIcon: Icon(Icons.account_circle, color: Colors.indigo,)
                   ),
                   validator: (value) {
                     if(value.isEmpty) return 'Enter Name';
@@ -43,7 +46,8 @@ class _TutorSignUpState extends State<TutorSignUp> {
                 TextFormField(
                   controller: _regNo,
                   decoration: InputDecoration(
-                    hintText: 'Registration Number'
+                    hintText: 'Registration Number',
+                    prefixIcon: Icon(Icons.dialpad, color: Colors.indigo,)
                   ),
                   validator: (value) {
                     if(value.isEmpty) return 'Enter Reg No';
@@ -52,7 +56,8 @@ class _TutorSignUpState extends State<TutorSignUp> {
                 TextFormField(
                   controller: _contact,
                   decoration: InputDecoration(
-                    hintText: 'Contact'
+                    hintText: 'Contact',
+                    prefixIcon: Icon(Icons.phone_android, color: Colors.indigo,)
                   ),
                   validator: (value) {
                     if(value.isEmpty) return 'Enter contact';
@@ -61,7 +66,8 @@ class _TutorSignUpState extends State<TutorSignUp> {
                 TextFormField(
                   controller: _cYear,
                   decoration: InputDecoration(
-                    hintText: 'Current Year'
+                    hintText: 'Current Year',
+                    prefixIcon: Icon(Icons.event, color: Colors.indigo,)
                   ),
                   validator: (value) {
                     if(value.isEmpty) return 'Enter current year';
@@ -70,7 +76,8 @@ class _TutorSignUpState extends State<TutorSignUp> {
                 TextFormField(
                   controller: _gYear,
                   decoration: InputDecoration(
-                    hintText: 'Graduation Year'
+                    hintText: 'Graduation Year',
+                    prefixIcon: Icon(Icons.calendar_today, color: Colors.indigo,)
                   ),
                   validator: (value) {
                     if(value.isEmpty) return 'Enter Graduation year';
@@ -79,7 +86,8 @@ class _TutorSignUpState extends State<TutorSignUp> {
                 TextFormField(
                   controller: _grade,
                   decoration: InputDecoration(
-                    hintText: 'Grade'
+                    hintText: 'Grade',
+                    prefixIcon: Icon(Icons.school, color: Colors.indigo,)
                   ),
                   validator: (value) {
                     if(value.isEmpty) return 'Enter Grade';
@@ -88,7 +96,8 @@ class _TutorSignUpState extends State<TutorSignUp> {
                 TextFormField(
                   controller: _topic,
                   decoration: InputDecoration(
-                    hintText: 'Topic'
+                    hintText: 'Topic',
+                    prefixIcon: Icon(Icons.book, color: Colors.indigo,)
                   ),
                   validator: (value) {
                     if(value.isEmpty) return 'Enter Topic';
@@ -97,7 +106,8 @@ class _TutorSignUpState extends State<TutorSignUp> {
                 TextFormField(
                   controller: _other,
                   decoration: InputDecoration(
-                    hintText: 'Other'
+                    hintText: 'Other',
+                    prefixIcon: Icon(Icons.add, color: Colors.indigo,)
                   ),
                   validator: (value) {
                     if(value.isEmpty) return 'Enter Other';
@@ -106,24 +116,28 @@ class _TutorSignUpState extends State<TutorSignUp> {
                 TextFormField(
                   controller: _email,
                   decoration: InputDecoration(
-                    hintText: 'Email'
+                    hintText: 'Email',
+                    prefixIcon: Icon(Icons.mail, color: Colors.indigo,)
                   ),
                   validator: (value) {
                     if(value.isEmpty) return 'Enter Email';
                   },
                 ),
                 TextFormField(
+                  obscureText: true,
                   controller: _password,
                   decoration: InputDecoration(
-                    hintText: 'Password'
+                    hintText: 'Password',
+                    prefixIcon: Icon(Icons.lock, color: Colors.indigo,)
                   ),
                   validator: (value) {
                     if(value.isEmpty) return 'Enter Passsword';
                   },
                 ),
                 RaisedButton(
+                  color: Colors.indigo,
                   shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
-                  child: Text('SignUp'),
+                  child: Text('SignUp', style: TextStyle(color:Colors.white ),),
                   onPressed: (){
                     if(_formKey.currentState.validate()){
 

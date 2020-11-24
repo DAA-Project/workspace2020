@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:workspace/screens/tutor/tutorScreen.dart';
 import '../../widgets/homeStudentDrawer.dart';
-import '../miScreen.dart';
+import '../mockInterview/miScreen.dart';
 
 
 class HomeStudentScreen extends StatelessWidget {

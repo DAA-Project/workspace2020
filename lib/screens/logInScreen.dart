@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import './signUpScreen.dart';
+import 'signup/signUpOptionScreen.dart';
 import './home/homeScreen.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -162,7 +162,7 @@ class _LoginScreenState extends State<LoginScreen> {
     return GestureDetector(
       onTap: () {Navigator.push(
                                 context,
-                                MaterialPageRoute(builder: (context) => SignUpScreen()),);},
+                                MaterialPageRoute(builder: (context) => SignUpOptionScreen()),);},
       child: RichText(
         text: TextSpan(children: [
           TextSpan(

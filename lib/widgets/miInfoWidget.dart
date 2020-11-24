@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../screens/miInfoScreen.dart';
+import '../screens/mockInterview/miInfoScreen.dart';
 import 'package:provider/provider.dart';
 import '../prvider_mi/fProfile.dart';
 

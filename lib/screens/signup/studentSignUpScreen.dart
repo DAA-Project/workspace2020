@@ -22,15 +22,20 @@ class _StudentSignUpState extends State<StudentSignUp> {
       ),
       body: SingleChildScrollView(
         child: Container(
+          height: MediaQuery.of(context).size.height*0.9,
           padding: EdgeInsets.all(10),
           child: Form(
             key: _formKey,
             child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 TextFormField(
                   controller: _name,
                   decoration:
-                      InputDecoration(hintText: 'Name', labelText: 'Name'),
+                      InputDecoration(
+                        hintText: 'Name', 
+                        labelText: 'Name',
+                        prefixIcon: Icon(Icons.account_circle, color: Colors.indigo,)),
                   validator: (value) {
                     if (value.isEmpty) return 'Enter Name';
                   },
@@ -40,6 +45,7 @@ class _StudentSignUpState extends State<StudentSignUp> {
                   decoration: InputDecoration(
                     hintText: 'Registration Number',
                     labelText: 'Registration Number',
+                    prefixIcon: Icon(Icons.dialpad, color: Colors.indigo,)
                   ),
                   validator: (value) {
                     if (value.isEmpty) return 'Enter Reg No';
@@ -48,7 +54,10 @@ class _StudentSignUpState extends State<StudentSignUp> {
                 TextFormField(
                   controller: _contact,
                   decoration: InputDecoration(
-                      hintText: 'Contact', labelText: 'Contact'),
+                      hintText: 'Contact', 
+                      labelText: 'Contact',
+                      prefixIcon: Icon(Icons.phone_android, color: Colors.indigo,)
+                    ),
                   validator: (value) {
                     if (value.isEmpty) return 'Enter contact';
                   },
@@ -57,7 +66,9 @@ class _StudentSignUpState extends State<StudentSignUp> {
                   controller: _cYear,
                   decoration: InputDecoration(
                       hintText: '1st, 2nd, 3rd, 4th',
-                      labelText: 'Current Year'),
+                      labelText: 'Current Year',
+                      prefixIcon: Icon(Icons.event, color: Colors.indigo,)
+                    ),
                   validator: (value) {
                     if (value.isEmpty) return 'Enter current year';
                   },
@@ -66,7 +77,8 @@ class _StudentSignUpState extends State<StudentSignUp> {
                   controller: _gYear,
                   decoration: InputDecoration(
                       hintText: 'Graduation Year',
-                      labelText: 'Graduation Year'),
+                      labelText: 'Graduation Year',
+                      prefixIcon: Icon(Icons.calendar_today, color: Colors.indigo,)),
                   validator: (value) {
                     if (value.isEmpty) return 'Enter Grad year';
                   },
@@ -74,23 +86,30 @@ class _StudentSignUpState extends State<StudentSignUp> {
                 TextFormField(
                   controller: _email,
                   decoration:
-                      InputDecoration(hintText: 'Email', labelText: 'Email'),
+                      InputDecoration(
+                        hintText: 'Email', 
+                        labelText: 'Email',
+                        prefixIcon: Icon(Icons.mail, color: Colors.indigo,)),
                   validator: (value) {
                     if (value.isEmpty) return 'Enter Email';
                   },
                 ),
                 TextFormField(
+                  obscureText: true,
                   controller: _password,
                   decoration: InputDecoration(
-                      hintText: 'Password', labelText: 'Password'),
+                      hintText: 'Password', 
+                      labelText: 'Password',
+                      prefixIcon: Icon(Icons.lock, color: Colors.indigo,)),
                   validator: (value) {
                     if (value.isEmpty) return 'Enter Passsword';
                   },
                 ),
                 RaisedButton(
+                  color: Colors.indigo,
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20)),
-                  child: Text('SignUp'),
+                  child: Text('SignUp',style: TextStyle(color: Colors.white),),
                   onPressed: () {
                     if (_formKey.currentState.validate()) {}
                   },
