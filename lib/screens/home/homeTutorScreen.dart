@@ -10,7 +10,7 @@ class HomeTutorScreen extends StatelessWidget {
           backgroundColor: Colors.cyan,
           elevation: 10,
           shadowColor: Colors.cyan),
-      //drawer: HomeTutorDrawer(),
+      drawer: HomeTutorDrawer(),
       backgroundColor: Color.fromARGB(255, 238, 238, 238),
     );
   }

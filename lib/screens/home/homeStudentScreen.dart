@@ -12,7 +12,7 @@ class HomeStudentScreen extends StatelessWidget {
           backgroundColor: Colors.cyan,
           elevation: 10,
           shadowColor: Colors.cyan),
-      //drawer: HomeStudentDrawer(),
+      drawer: HomeStudentDrawer(),
       backgroundColor: Color.fromARGB(255, 238, 238, 238),
       body: Container(
         decoration: BoxDecoration(
